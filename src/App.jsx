@@ -1,10 +1,17 @@
-// App.js
 import React from 'react';
+import { LanguageProvider } from './LanguageContext';
+import LanguageSelector from './LanguageSelector';
+import Greeting from './Greeting';
 
-const App = () => {
+function App() {
   return (
-    <>useContext</>
+    <LanguageProvider>
+      <div>
+        <LanguageSelector />
+        <Greeting />
+      </div>
+    </LanguageProvider>
   );
-};
+}
 
 export default App;
